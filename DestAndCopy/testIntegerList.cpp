@@ -12,12 +12,16 @@ int main()
 {
 	const int SIZE = 5;
 	IntegerList a(SIZE);
-
 	// just put some numbers in to test it
 	for (int i = 0; i < SIZE; i++)
 		a.setElement(i, i * 2);
 
+	IntegerList b(a);
+
 	cout << "A's values:" << endl;
 	display(a);
+	cout << endl;
+	cout << "B's values:" << endl;
+	display(b);
 
 }

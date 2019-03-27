@@ -15,6 +15,22 @@ IntegerList::IntegerList(int size)
       list[ndx] = 0;
 }
 
+// copy constructor
+IntegerList::IntegerList(const IntegerList & obj)
+{
+	numElements = obj.numElements;
+	list = new int[numElements];
+	for (int i = 0; i < numElements; i++)
+	{
+		list[i] = obj.list[i];
+	}	
+}
+
+// deconstructor
+IntegerList::~IntegerList()
+{
+	delete[] list;
+}
 
 //***********************************************************
 // isValid member function.                                 *
